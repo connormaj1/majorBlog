@@ -4,7 +4,7 @@
     border-radius: 0;
     height: 400px;
     margin-bottom: 20px;
-    background-color: white;
+    // background-color: white;
     .card-topper {
       height: 200px;
       width: 100%;
@@ -13,6 +13,7 @@
     }
     .card-block {
       padding: 10px;
+      margin-bottom: 10px;
       .card-title {
         font-size: 1.3rem;
         margin-bottom: 0;
@@ -102,13 +103,13 @@
 /* Medium. Above 48em (768px) */
 @media screen and (min-width: 48em) {
   .posts.index .card {
-    height: 420px;
+    height: 500px;
   }
 }
 
 /* Extra large. Above 75em (1200px) */
 @media screen and (min-width: 75em) {
   .posts.index .card {
-    height: 415px;
+    height: 425px;
   }
 }
