@@ -33,6 +33,10 @@ class Post < ApplicationRecord
         recent_paginated(page).with_tag(tag)
     end
 
+    scope :no_news, -> {
+      tagged_with("News", :exclude => true)
+    }
+
     def should_generate_new_friendly_id?
         title_changed?
     end
@@ -52,5 +56,9 @@ class Post < ApplicationRecord
 
     def unpublish
       update(published: false, published_at: nil)
+    end
+
+    def no_news
+
     end
 end

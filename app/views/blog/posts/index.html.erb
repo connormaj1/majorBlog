@@ -1,6 +1,19 @@
 <% provide(:page_title, 'All Posts') %>
 <% provide(:blog_active, 'active') %>
 
+<p style="margin-bottom: 10px;">
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFilter" aria-expanded="false" aria-controls="collapseExample">
+    Filter by Hero
+  </button>
+</p>
+<div class="collapse" id="collapseFilter">
+  <div class="card card-block" style="display: block;">
+    <% tags = ActsAsTaggableOn::Tag.all.order('name asc') %>
+
+    <%= tags.reject { |t| t.name == "News" }.map { |t| link_to t.name, posts_path(tag: t.name)}.join(',  ').html_safe %>
+  </div>
+</div>
+
 <div class="row">
   <%= render @posts %>
 </div>
