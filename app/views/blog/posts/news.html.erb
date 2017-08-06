@@ -1,0 +1,19 @@
+<% provide(:page_title, 'News') %>
+<% provide(:news_active, 'active') %>
+
+<div class="row">
+  <% @news.each do |n| %>
+  <div class='col-sm-12 col-md-12 col-lg-6'>
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title"><%= n.title%></h4>
+        <%= n.body.html_safe %>
+        <p class='published-date'><%= n.display_day_published %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<div class="apple_pagination">
+  <%= will_paginate @news, container: false %>
+</div>

@@ -1,10 +1,11 @@
-.posts.index {
+.posts.index, .posts.news {
   .card {
     border: none;
     border-radius: 0;
     height: 400px;
-    margin-bottom: 20px;
-    // background-color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    background-color: $primary-color-light;
     .card-topper {
       height: 200px;
       width: 100%;
@@ -13,20 +14,19 @@
     }
     .card-block {
       padding: 10px;
-      margin-bottom: 10px;
       .card-title {
         font-size: 1.3rem;
-        margin-bottom: 0;
+        margin-bottom: 2px;
         a {
           color: black;
           text-decoration: none;
         }
       }
       .tags {
-        margin-bottom: 0;
+        margin-bottom: 2px;
         a {
-          font-family: 'Roboto', sans-serif;
-          font-size: 12px;
+          font-family: 'Roboto Slab', serif !important;
+          font-size: 20px;
         }
       }
       .published-date {
@@ -40,7 +40,6 @@
         font-size: 0.9rem;
         color: black;
       }
-
     }
   }
 }
@@ -96,20 +95,20 @@
 
 @media screen and (min-width: 34em) {
   .posts.index .card {
-    height: 440px;
+    height: auto;
   }
 }
 
 /* Medium. Above 48em (768px) */
 @media screen and (min-width: 48em) {
   .posts.index .card {
-    height: 500px;
+    height: auto;
   }
 }
 
 /* Extra large. Above 75em (1200px) */
 @media screen and (min-width: 75em) {
   .posts.index .card {
-    height: 425px;
+    height: auto;
   }
 }

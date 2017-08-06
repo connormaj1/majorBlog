@@ -1,16 +1,13 @@
 <div class='col-sm-12 col-md-12 col-lg-6'>
   <div class="card">
-    <!-- <%= link_to post do%>
-      <div class="card-topper" style='background-image: url(<%= post.banner_image_url %>);'></div>
-    <% end %> -->
+
     <%= post.body.html_safe %>
     <div class="card-block">
       <h4 class="card-title"><%= post.title%></h4>
-      <p class="tags"><%= post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ').html_safe %></p>
+      <% unless post.tag_list.blank? %>
+        <p class="tags"><%= post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ').html_safe %></p>
+      <% end %>
       <p class='published-date'><%= post.display_day_published %></p>
-      <!-- <%= link_to post do%>
-        <p class="card-text"><%= truncate(post.description, length: 130) %></p>
-      <% end %> -->
     </div>
   </div>
 </div>

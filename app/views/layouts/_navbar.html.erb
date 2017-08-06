@@ -2,7 +2,7 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href='/' style="margin-left: 3%">
+  <a class="navbar-brand" href='/' style="margin-left: 2%">
     OVER<span class='light'>WATCHED</span>
   </a>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -11,10 +11,10 @@
         <%= link_to 'Home', root_path, class: "nav-link #{yield(:blog_active)}" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'News', about_path, class: "nav-link #{yield(:about_active)}" %>
+        <%= link_to 'News', news_path, class: "nav-link #{yield(:news_active)}" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'About', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+        <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
       </li>
       <% if author_signed_in? %>
         <li class="nav-item dropdown author-nav">
